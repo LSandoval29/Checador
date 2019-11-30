@@ -16,4 +16,11 @@ Route::put('/user/','UserController@update')->name('user');
 Route::delete('/userdestroy/{id}', 'userController@destroy');
 
 //RUTAS DE PROYECTOS:
+Route::get('/projects/', 'projectController@index')->name('project');
+Route::get('/proyecto/{id}', 'projectController@show')->name('proyecto');
+Route::post('/proyecto', 'ProjectController@store')->name('proyecto');
+Route::put('/proyecto/', 'projectController@update')->name('proyecto');
+Route::delete('/proyecto/{id}', 'ProjectController@destroy');
+
+
 

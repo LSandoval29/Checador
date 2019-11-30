@@ -15,6 +15,7 @@ class UsersTableSeeder extends Seeder
         $user = new User;
         $user->name = "Loir";
         $user->lastname = "Sandoval";
+        $user->matricula = "2016082296";
         $user->email="loir@mail.com";
         $user->date_of_birth="2019-11-13";
         $user->phone_number = "6121539429";
@@ -25,6 +26,7 @@ class UsersTableSeeder extends Seeder
         $user = new User;
         $user->name = "Juan";
         $user->lastname = "Perez";
+        $user->matricula = "2016082295";
         $user->email="juan@mail.com";
         $user->date_of_birth="2019-11-13";
         $user->phone_number = "6121539429";
