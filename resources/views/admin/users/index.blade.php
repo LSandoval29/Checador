@@ -8,8 +8,6 @@
 
 @section('content')
 <div class="container-fluid">
-<h4>{{$section_name}}</h4>
-
     <div class="card shadow mb-4">
       <div class="card-header py-3">
       @if( Auth::user()->hasPermissionTo('Editar usuarios'))
@@ -17,10 +15,10 @@
             <span class="icon text-white-50">
               <i class="fas fa-user"></i>
             </span>
-            <span class="text">Add new user</span>
+            <span class="text">Agregar nuevo usuario</span>
         </button>
        @endif 
-        <h5 class="m-0 font-weight-bold text-primary">List of user registered</h5>
+        <h5 class="m-0 font-weight-bold text-primary">{{$section_name}}</h5>
       </div>
       <div class="col-md-12">
             <div class="card-body">
@@ -28,24 +26,24 @@
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>
                       <tr>
-                        <th>Name</th>
-                        <th>LastName</th>
-                        <th>Date of birth</th>
-                        <th>Phone</th>
+                        <th>Nombre(s)</th>
+                        <th>Apellidos</th>
+                        <th>Fecha de nacimiento</th>
+                        <th>Teléfono</th>
                         <th>Email</th>
-                        <th>Registred Date</th>
-                        <th>Actions</th>
+                        <th>Fecha de registro</th>
+                        <th>Acciones</th>
                       </tr>
                     </thead>
                     <tfoot>
                       <tr>
-                        <th>Name</th>
-                        <th>LastName</th>
-                        <th>Date of birth</th>
-                        <th>Phone</th>
+                        <th>Nombre(s)</th>
+                        <th>Apellidos</th>
+                        <th>Fecha de nacimiento</th>
+                        <th>Teléfono</th>
                         <th>Email</th>
-                        <th>Registred Date</th>
-                        <th>Actions</th> 
+                        <th>Fecha de registro</th>
+                        <th>Acciones</th> 
                       </tr>
                     </tfoot>
                     <tbody>
@@ -58,20 +56,25 @@
                           <td>{{$user->phone_number}}</td>
                           <td>{{$user->email}}</td>
                           <td>{{$user->created_at}}</td>
+                          @if( Auth::user()->hasPermissionTo('Editar usuarios'))
                           <td>
-                          @if( Auth::user()->hasPermissionTo('Editar usuarios'))
-                            <button onclick="deleteThis({{$user->id}},this)" class="btn btn-danger btn-circle" data-toggle="tooltip" data-placement="top" title="Delete row">
+                            <button onclick="deleteThis({{$user->id}},this)" class="btn btn-danger btn-sm" data-toggle="tooltip" data-placement="top">
                               <i class="fas fa-trash"></i>
+                              Eliminar
                             </button>
-                          @endif
-
-                          @if( Auth::user()->hasPermissionTo('Editar usuarios'))
-                            <button onclick="getDataBack({{$user->id}})" class="btn btn-warning btn-circle" data-toggle="tooltip" data-placement="top" title="Edit row">
+                          
+                            <button onclick="getDataBack({{$user->id}})" class="btn btn-warning btn-sm" data-toggle="tooltip" data-placement="top">
                               <i class="fas fa-pencil-alt"></i>
+                              Actualizar
                             </button>
-                          @endif
+
+                            <a class="btn btn-primary btn-sm" href="/usuario_detalle/{{$user->id}}">
+                            <i class="fas fa-user"></i>
+                              Ver perfil
+                            </a>
                           </td>
                         </tr>
+                        @endif
                       @endforeach
                       @endif
                     </tbody>

@@ -25,11 +25,6 @@
 <!-- Divider -->
 <hr class="sidebar-divider">
 
-<!-- Heading -->
-<div class="sidebar-heading">
-  Addons
-</div>
-
 <!-- Nav Item - Pages Collapse Menu -->
 <!--<li class="nav-item">
   <a class="nav-link" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
@@ -54,14 +49,14 @@
 <li class="nav-item {{ (request()->is('users*')) ? 'active' : '' }}">
   <a class="nav-link" href="{{URL::to('/users')}}">
     <i class="fas fa-user fa-table"></i>
-    <span>Users</span></a>
+    <span>Usuarios</span></a>
 </li>
 @endif
 
 <li class="nav-item">
   <a class="nav-link" href="{{URL::to('/projects')}}">
-    <i class="fas fa-fw fa-table"></i>
-    <span>Projects</span></a>
+    <i class="nav-icon fas fa-project-diagram"></i>
+    <span>Proyectos</span></a>
 </li>
 
 <li class="nav-item">

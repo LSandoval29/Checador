@@ -14,7 +14,7 @@ class projectController extends Controller
            Auth::user()->hasPermissionTo('Visualizar usuarios')){
 
             $projects = Project::where('status', 'active')->get();
-            $section_name = "Proyectos";
+            $section_name = "Lista de proyectos registrados";
 
             return view('admin.projects.index',compact('projects','section_name'));
 

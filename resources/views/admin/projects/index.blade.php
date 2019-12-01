@@ -11,9 +11,9 @@
     <div class="card shadow mb-4">
       <div class="card-header py-3">
       @if( Auth::user()->hasPermissionTo('Editar usuarios'))
-        <button class="btn btn-info btn-icon-split m-0 float-right " data-toggle="modal" data-target="#mymodal" title="Add new user">
+        <button class="btn btn-info btn-icon-split m-0 float-right " data-toggle="modal" data-target="#mymodal">
             <span class="icon text-white-50">
-              <i class="fas fa-user"></i>
+              <i class="nav-icon fas fa-project-diagram"></i>
             </span>
             <span class="text">Añadir nuevo proyecto</span>
         </button>
@@ -27,7 +27,6 @@
                     <thead>
                       <tr>
                         <th>Nombre proyecto</th>
-                        <th>Descripción</th>
                         <th>Fecha inicio</th>
                         <th>Fecha cierre</th>
                         <th>Actions</th>
@@ -36,7 +35,6 @@
                     <tfoot>
                       <tr>
                         <th>Nombre proyecto</th>
-                        <th>Descripción</th>
                         <th>Fecha inicio</th>
                         <th>Fecha cierre</th>
                         <th>Actions</th> 
@@ -47,18 +45,24 @@
                       @foreach($projects as $project)
                         <tr>
                           <td>{{$project->nombre}}</td>
-                          <td>{{$project->descripcion}}</td>
                           <td>{{$project->fechaInicio}}</td>
                           <td>{{$project->fechaCierre}}</td>
-                          <td>
                           @if( Auth::user()->hasPermissionTo('Editar usuarios'))
-                            <button onclick="deleteThis({{$project->id}},this)" class="btn btn-danger btn-circle" data-toggle="tooltip" data-placement="top" title="Delete row">
+                          <td>
+                            <button onclick="deleteThis({{$project->id}},this)" class="btn btn-danger btn-sm" data-toggle="tooltip" data-placement="top">
                               <i class="fas fa-trash"></i>
+                              Eliminar
                             </button>
 
-                            <button onclick="getDataBack({{$project->id}})" class="btn btn-warning btn-circle" data-toggle="tooltip" data-placement="top" title="Edit row">
+                            <button onclick="getDataBack({{$project->id}})" class="btn btn-warning btn-sm" data-toggle="tooltip" data-placement="top">
                               <i class="fas fa-pencil-alt"></i>
+                              Actualizar
                             </button>
+
+                            <a class="btn btn-primary btn-sm" href="#">
+                            <i class="fas fa-folder"></i>
+                              Ver
+                            </a>
                           </td>
                         </tr>
                         @endif

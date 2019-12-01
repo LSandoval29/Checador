@@ -19,7 +19,7 @@ class userController extends Controller
            Auth::user()->hasPermissionTo('Visualizar usuarios')){
 
             $users = User::where('status','active')->get();
-            $section_name = "Users";
+            $section_name = "Lista de usuarios registrados";
 
             return view('admin.users.index',compact('users','section_name'));
 
@@ -100,6 +100,19 @@ class userController extends Controller
 
             }
         }   
+    }
+
+    public function detail($id)
+    {
+        if(Auth::user()->hasPermissionTo('Administrar usuarios') || 
+           Auth::user()->hasPermissionTo('Visualizar usuarios') ){
+
+            $usuario = User::find($id);
+            return view('admin.users.user_detalle',compact('usuario'));
+
+        }else{
+            return redirect()->back()->with('error','No permitido');
+        }
     }
     
 
