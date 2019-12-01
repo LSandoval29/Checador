@@ -11,7 +11,7 @@
     <div class="card shadow mb-4">
       <div class="card-header py-3">
       @if( Auth::user()->hasPermissionTo('Editar usuarios'))
-        <button class="btn btn-info btn-icon-split m-0 float-right " data-toggle="modal" data-target="#mymodal" title="Add new user">
+        <button class="btn btn-primary btn-icon-split m-0 float-right " data-toggle="modal" data-target="#mymodal" title="Add new user">
             <span class="icon text-white-50">
               <i class="fas fa-user"></i>
             </span>
@@ -92,7 +92,7 @@
     <div class="modal-dialog modal-lg" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Add new user</h5>
+          <h5 class="modal-title" id="exampleModalLabel">Agregar nuevo usuario</h5>
           <button class="close" type="button" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">×</span>
           </button>
@@ -101,7 +101,7 @@
           @csrf
           <div class="modal-body">
               <div class="form-group">
-                  <label for="exampleInputPassword1">Name</label>
+                  <label for="exampleInputPassword1">Nombre(s)</label>
                   <div class="input-group mb-3">
                       <div class="input-group-prepend">
                       <span class="input-group-text" id="basic-addon1">N</span>
@@ -110,7 +110,7 @@
                   </div>
               </div>
               <div class="form-group">
-                  <label for="exampleInputPassword1">LastName</label>
+                  <label for="exampleInputPassword1">Apellidos</label>
                   <div class="input-group mb-3">
                       <div class="input-group-prepend">
                       <span class="input-group-text" id="basic-addon1">L</span>
@@ -119,7 +119,7 @@
                   </div>
               </div>
               <div class="form-group">
-                  <label for="exampleInputPassword1">Date of birth</label>
+                  <label for="exampleInputPassword1">Fecha de nacimiento</label>
                   <div class="input-group mb-3">
                       <div class="input-group-prepend">
                       <span class="input-group-text" id="basic-addon1">D</span>
@@ -128,7 +128,7 @@
                   </div>
               </div>
               <div class="form-group">
-                  <label for="exampleInputPassword1">Phone Number</label>
+                  <label for="exampleInputPassword1">Teléfono</label>
                   <div class="input-group mb-3">
                       <div class="input-group-prepend">
                       <span class="input-group-text" id="basic-addon1">P</span>
@@ -146,7 +146,7 @@
                   </div>
               </div>
               <div class="form-group">
-                  <label for="exampleInputPassword1">Password</label>
+                  <label for="exampleInputPassword1">Contraseña</label>
                   <div class="input-group mb-3">
                       <div class="input-group-prepend">
                       <span class="input-group-text" id="basic-addon1">P</span>
@@ -158,10 +158,10 @@
 
               <div class="modal-footer">
                 <button class="btn btn-secondary" type="button" data-dismiss="modal">
-                  Cancel
+                  Cancelar
                 </button>
                 <button class="btn btn-primary" type="submit">
-	          	    Save
+	          	    Agregar
 	              </button>
               </div>            
           </div>
@@ -174,7 +174,7 @@
     <div class="modal-dialog modal-lg" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Update user</h5>
+          <h5 class="modal-title" id="exampleModalLabel">Actualizar usuario</h5>
           <button class="close" type="button" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">×</span>
           </button>
@@ -185,7 +185,7 @@
         	<input type="hidden" value="" id="id" name="id">
           <div class="modal-body">
               <div class="form-group">
-                  <label for="exampleInputPassword1">Name</label>
+                  <label for="exampleInputPassword1">Nombre(s)</label>
                   <div class="input-group mb-3">
                       <div class="input-group-prepend">
                       <span class="input-group-text" id="basic-addon1">N</span>
@@ -194,7 +194,7 @@
                   </div>
               </div>
               <div class="form-group">
-                  <label for="exampleInputPassword1">LastName</label>
+                  <label for="exampleInputPassword1">Apellidos</label>
                   <div class="input-group mb-3">
                       <div class="input-group-prepend">
                       <span class="input-group-text" id="basic-addon1">L</span>
@@ -203,7 +203,7 @@
                   </div>
               </div>
               <div class="form-group">
-                  <label for="exampleInputPassword1">Date of birth</label>
+                  <label for="exampleInputPassword1">Fecha de nacimiento</label>
                   <div class="input-group mb-3">
                       <div class="input-group-prepend">
                       <span class="input-group-text" id="basic-addon1">D</span>
@@ -212,7 +212,7 @@
                   </div>
               </div>
               <div class="form-group">
-                  <label for="exampleInputPassword1">Phone Number</label>
+                  <label for="exampleInputPassword1">Teléfono</label>
                   <div class="input-group mb-3">
                       <div class="input-group-prepend">
                       <span class="input-group-text" id="basic-addon1">P</span>
@@ -230,7 +230,7 @@
                   </div>
               </div>
               <div class="form-group">
-                  <label for="exampleInputPassword1">Password</label>
+                  <label for="exampleInputPassword1">Contraseña</label>
                   <div class="input-group mb-3">
                       <div class="input-group-prepend">
                       <span class="input-group-text" id="basic-addon1">P</span>
@@ -242,10 +242,10 @@
 
               <div class="modal-footer">
                 <button class="btn btn-secondary" type="button" data-dismiss="modal">
-                  Cancel
+                  Cancelar
                 </button>
                 <button class="btn btn-primary" type="submit">
-	          	    Save
+	          	    Actualizar
 	              </button>
               </div>            
           </div>

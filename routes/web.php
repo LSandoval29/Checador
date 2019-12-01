@@ -22,6 +22,8 @@ Route::get('/proyecto/{id}', 'projectController@show')->name('proyecto');
 Route::post('/proyecto', 'ProjectController@store')->name('proyecto');
 Route::put('/proyecto/', 'projectController@update')->name('proyecto');
 Route::delete('/proyecto/{id}', 'ProjectController@destroy');
+Route::get('/proyecto_detalle/{id}', 'ProjectController@detail')->name('proyecto_detalle');
+
 
 
 

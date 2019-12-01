@@ -100,4 +100,11 @@ class projectController extends Controller
             ], 404);
         }
     }
+
+    public function detail($id)
+    {
+        $project = Project::find($id);
+
+        return view('admin.projects.project_detalle', compact('project'));
+    }
 }
