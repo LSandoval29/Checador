@@ -15,7 +15,7 @@
             <span class="icon text-white-50">
               <i class="nav-icon fas fa-project-diagram"></i>
             </span>
-            <span class="text">Añadir nuevo proyecto</span>
+            <span class="text">Agregar nuevo proyecto</span>
         </button>
        @endif 
         <h5 class="m-0 font-weight-bold text-primary">{{$section_name}}</h5>
