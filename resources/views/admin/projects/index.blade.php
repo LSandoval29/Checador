@@ -47,25 +47,27 @@
                           <td>{{$project->nombre}}</td>
                           <td>{{$project->fechaInicio}}</td>
                           <td>{{$project->fechaCierre}}</td>
-                          @if( Auth::user()->hasPermissionTo('Editar usuarios'))
                           <td>
+                          @if( Auth::user()->hasPermissionTo('Editar usuarios'))
                             <button onclick="deleteThis({{$project->id}},this)" class="btn btn-danger btn-sm" data-toggle="tooltip" data-placement="top">
                               <i class="fas fa-trash"></i>
                               Eliminar
                             </button>
+                          @endif
 
+                          @if( Auth::user()->hasPermissionTo('Editar usuarios'))
                             <button onclick="getDataBack({{$project->id}})" class="btn btn-warning btn-sm" data-toggle="tooltip" data-placement="top">
                               <i class="fas fa-pencil-alt"></i>
                               Actualizar
                             </button>
-
+                          @endif
+                          
                             <a class="btn btn-primary btn-sm" href="/proyecto_detalle/{{$project->id}}">
                             <i class="fas fa-folder"></i>
                               Ver
                             </a>
                           </td>
                         </tr>
-                        @endif
                       @endforeach
                       @endif
                     </tbody>
