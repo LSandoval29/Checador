@@ -114,6 +114,19 @@ class userController extends Controller
             return redirect()->back()->with('error','No permitido');
         }
     }
+
+     public function previous($id)
+    {
+        if(Auth::user()->hasPermissionTo('Administrar usuarios') || 
+           Auth::user()->hasPermissionTo('Visualizar usuarios') ){
+
+            $usuario = User::find($id);
+            return view('admin.users.vista_previa',compact('usuario'));
+
+        }else{
+            return redirect()->back()->with('error','No permitido');
+        }
+    }
     
 
 }

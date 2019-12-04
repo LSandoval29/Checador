@@ -75,6 +75,10 @@
                             <i class="fas fa-user"></i>
                               
                             </a>
+                            <a class="btn btn-primary btn-sm" href="/vista_previa/{{$user->id}}">
+                            <i class="fas fa-user"></i>
+                              
+                            </a>
                           </td>
                         </tr>
                       @endforeach

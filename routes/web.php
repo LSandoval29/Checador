@@ -12,6 +12,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/users/', 'userController@index')->name('users');
 Route::get('/user/{id}','UserController@show')->name('user');
 Route::get('/usuario_detalle/{id}', 'UserController@detail')->name('usuario_detalle');
+Route::get('/vista_previa/{id}', 'UserController@previous')->name('vista_previa');
 Route::post('/user/','UserController@store')->name('user');
 Route::put('/user/','UserController@update')->name('user');
 Route::delete('/userdestroy/{id}', 'userController@destroy');
