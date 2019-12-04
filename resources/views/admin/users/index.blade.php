@@ -60,20 +60,20 @@
                           @if( Auth::user()->hasPermissionTo('Editar usuarios'))
                             <button onclick="deleteThis({{$user->id}},this)" class="btn btn-danger btn-sm" data-toggle="tooltip" data-placement="top">
                               <i class="fas fa-trash"></i>
-                              Eliminar
+                              
                             </button>
                           @endif
 
                           @if( Auth::user()->hasPermissionTo('Editar usuarios'))
                             <button onclick="getDataBack({{$user->id}})" class="btn btn-warning btn-sm" data-toggle="tooltip" data-placement="top">
                               <i class="fas fa-pencil-alt"></i>
-                              Actualizar
+
                             </button>
                           @endif
 
                             <a class="btn btn-primary btn-sm" href="/usuario_detalle/{{$user->id}}">
                             <i class="fas fa-user"></i>
-                              Ver perfil
+                              
                             </a>
                           </td>
                         </tr>

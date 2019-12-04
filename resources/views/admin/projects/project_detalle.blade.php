@@ -17,25 +17,25 @@
         </div>
         <div class="card-body">
           <div class="form-group">
-            <label for="inputName">Nombre del Proyecto</label>
+            <label for="inputName" class="text-primary">Nombre del Proyecto:</label>
             <div class="text-muted">
             	<label>{{$project->nombre}}</label>
             </div>
           </div>
           <div class="form-group">
-            <label for="inputDescription">Descripcion</label>
+            <label for="inputDescription" class="text-primary">Descripción:</label>
             <div class="text-muted">
             	<label>{{$project->descripcion}}</label>
             </div>
           </div>
           <div class="form-group">
-            <label for="inputStatus">Feha de Inicio</label>
+            <label for="inputStatus" class="text-primary">Feha de Inicio:</label>
             <div class="text-muted">
             	<label>{{$project->fechaInicio}}</label>
             </div>
           </div>
           <div class="form-group">
-            <label for="inputClientCompany">Fecha de Cierre</label>
+            <label for="inputClientCompany" class="text-primary">Fecha de Cierre:</label>
             <div class="text-muted">
             	<label>{{$project->fechaCierre}}</label>
             </div>
@@ -60,8 +60,8 @@
           <table class="table">
             <thead>
               <tr>
-                <th>Nombre</th>
-                <th>Ver</th>
+                <th class="text-primary">Nombre</th>
+                <th class="text-primary">Ver</th>
               </tr>
             </thead>
             <tbody>

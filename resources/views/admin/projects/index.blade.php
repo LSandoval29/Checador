@@ -29,7 +29,7 @@
                         <th>Nombre proyecto</th>
                         <th>Fecha inicio</th>
                         <th>Fecha cierre</th>
-                        <th>Actions</th>
+                        <th>Acciones</th>
                       </tr>
                     </thead>
                     <tfoot>
@@ -37,7 +37,7 @@
                         <th>Nombre proyecto</th>
                         <th>Fecha inicio</th>
                         <th>Fecha cierre</th>
-                        <th>Actions</th> 
+                        <th>Acciones</th> 
                       </tr>
                     </tfoot>
                     <tbody>
@@ -61,7 +61,7 @@
                               Actualizar
                             </button>
                           @endif
-                          
+
                             <a class="btn btn-primary btn-sm" href="/proyecto_detalle/{{$project->id}}">
                             <i class="fas fa-folder"></i>
                               Ver

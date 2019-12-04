@@ -25,13 +25,13 @@
 
             <ul class="list-group list-group-unbordered mb-3">
               <li class="list-group-item">
-                <b>F. Nacimiento</b> <a class="float-right">{{$usuario->date_of_birth}}</a>
+                <b class="text-primary">Fecha de Nacimiento:</b> <a class="float-right">{{$usuario->date_of_birth}}</a>
               </li>
               <li class="list-group-item">
-                <b>Telefono</b> <a class="float-right">{{$usuario->phone_number}}</a>
+                <b class="text-primary">Teléfono:</b> <a class="float-right">{{$usuario->phone_number}}</a>
               </li>
               <li class="list-group-item">
-                <b>Email</b> <a class="float-right">{{$usuario->email}}</a>
+                <b class="text-primary">Email:</b> <a class="float-right">{{$usuario->email}}</a>
               </li>
             </ul>
 

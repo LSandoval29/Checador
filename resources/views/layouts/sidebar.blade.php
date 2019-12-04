@@ -62,7 +62,7 @@
 <li class="nav-item">
   <a class="nav-link" href="#">
     <i class="fas fa-cogs "></i>   
-    <span>Config</span></a>
+    <span>Configuración</span></a>
 </li>
 
 
