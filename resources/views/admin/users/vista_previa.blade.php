@@ -78,7 +78,7 @@
 
 
             <!--Información Personal -->
-      <div class="col-md-3">
+      <div class="col-md-4">
 
         <!-- Profile Image -->
         <div class="card card-primary card-outline">

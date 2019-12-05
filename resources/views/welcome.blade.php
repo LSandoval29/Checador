@@ -9,7 +9,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Checador 2.0</title>
+  <title>Checador DASC-UABCS</title>
 
   <!-- Custom fonts for this template-->
   <link href="{{ asset('app_assets/vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
@@ -37,12 +37,12 @@
               <div class="col-lg-12">
                 <div class="p-5">
                   <div class="text-center">
-                    <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
+                    <h1 class="h4 text-gray-900 mb-4">Checador DASC-UABCS</h1>
                   </div>
                   <form method="POST" action="{{ route('login') }}">
                   @csrf
                     <div class="form-group">
-                      <input type="email" id="email" name="email" class="form-control form-control-user @error('email') is-invalid @enderror" aria-describedby="emailHelp" value="{{ old('email') }}" placeholder="{{ __('E-Mail Address') }}" required>
+                      <input type="email" id="email" name="email" class="form-control form-control-user @error('email') is-invalid @enderror" aria-describedby="emailHelp" value="{{ old('email') }}" placeholder="{{ __('E-Mail') }}" required>
                       @error('email')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
@@ -64,21 +64,9 @@
                       </div>
                     </div>
                     <button type="submit" class="btn btn-primary btn-user btn-block">
-                        {{ __('Login') }}
+                        {{ __('Iniciar Sesión') }}
                     </button>
-                    <hr>
-                  </form>
-                  <hr>
-                  <div class="text-center">
-                  @if (Route::has('password.request'))
-                    <a class="small" href="{{ route('password.request') }}">
-                        {{ __('Forgot Your Password?') }}
-                    </a>
-                  @endif
-                  </div>
-                  <div class="text-center">
-                    <a class="small" href="register.html">Create an Account!</a>
-                  </div>
+                  </form> 
                 </div>
               </div>
             </div>

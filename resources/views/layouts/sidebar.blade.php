@@ -6,7 +6,7 @@
   <div class="sidebar-brand-icon rotate-n-15">
     <i class="fas fa-laugh-wink"></i>
   </div>
-  <div class="sidebar-brand-text mx-3">Checador <sup>2.0</sup></div>
+  <div class="sidebar-brand-text mx-3">Checador <b>DASC</b></div>
 </a>
 
 <!-- Divider -->
