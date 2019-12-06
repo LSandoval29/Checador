@@ -27,11 +27,16 @@
                     <p id="hora" class="hora"></p>
                 </div>
                 <form method="POST" action="">
-                    <div class="input-group mb-5">
-                        <input type="password" class="form-control" placeholder="Matrícula">
-                        <div class="input-append-group">
-                        <button type="submit" class="btn btn-success"> Checar <i class="far fa-check-circle"></i></button>
+                    <div class="card bg-primary text-center">
+                        <div class="row mx-auto">
+                            <div class="col-xs-4 ">
+                                 <input type="text" class="form-control" placeholder="Matrícula">
+                            </div>
+                            <div class="col-xs-4">
+                                <button type="submit" class="btn btn-success"> Checar <i class="far fa-check-circle"></i></button>
+                            </div>
                         </div>
+
                     </div> 
                 </form>        
             </div>

@@ -46,7 +46,7 @@
           <div class="card-body box-profile border-bottom-primary">
             <div class="text-center">
               <img class="profile-user-img img-fluid img-circle"
-                   src="{{asset('app_assets/img/user.jpg') }}"
+                   src="{{asset('app_assets/img/user.png') }}"
                    alt="User profile picture">
             </div>
 
