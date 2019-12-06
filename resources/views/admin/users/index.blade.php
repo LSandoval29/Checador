@@ -7,7 +7,7 @@
 @endsection
 
 @section('content')
-<div class="container-fluid">
+<div class="container-fluid mb-5">
     <div class="card shadow mb-4">
       <div class="card-header py-3">
       @if( Auth::user()->hasPermissionTo('Editar usuarios'))
@@ -31,7 +31,6 @@
                         <th>Fecha de nacimiento</th>
                         <th>Teléfono</th>
                         <th>Email</th>
-                        <th>Fecha de registro</th>
                         <th>Acciones</th>
                       </tr>
                     </thead>
@@ -42,7 +41,6 @@
                         <th>Fecha de nacimiento</th>
                         <th>Teléfono</th>
                         <th>Email</th>
-                        <th>Fecha de registro</th>
                         <th>Acciones</th> 
                       </tr>
                     </tfoot>
@@ -55,29 +53,24 @@
                           <td>{{$user->date_of_birth}}</td>
                           <td>{{$user->phone_number}}</td>
                           <td>{{$user->email}}</td>
-                          <td>{{$user->created_at}}</td>
                           <td>
                           @if( Auth::user()->hasPermissionTo('Editar usuarios'))
                             <button onclick="deleteThis({{$user->id}},this)" class="btn btn-danger btn-sm" data-toggle="tooltip" data-placement="top">
                               <i class="fas fa-trash"></i>
-                              
+                                Eliminar
                             </button>
                           @endif
 
                           @if( Auth::user()->hasPermissionTo('Editar usuarios'))
                             <button onclick="getDataBack({{$user->id}})" class="btn btn-warning btn-sm" data-toggle="tooltip" data-placement="top">
                               <i class="fas fa-pencil-alt"></i>
-
+                                Editar
                             </button>
                           @endif
 
                             <a class="btn btn-primary btn-sm" href="/usuario_detalle/{{$user->id}}">
                             <i class="fas fa-user"></i>
-                              
-                            </a>
-                            <a class="btn btn-primary btn-sm" href="/vista_previa/{{$user->id}}">
-                            <i class="fas fa-user"></i>
-                              
+                              Ver 
                             </a>
                           </td>
                         </tr>
@@ -301,12 +294,12 @@
   function deleteThis(id,button){
     console.log(id);
     swal({
-      title: "Are you sure?",
-      text: "Your will not be able to recover this imaginary file!",
+      title: "Está seguro?",
+      text: "El registro será eliminado!",
       type: "warning",
       showCancelButton: true,
       confirmButtonClass: "btn-danger",
-      confirmButtonText: "Yes, delete it!",
+      confirmButtonText: "Si, eliminar!",
       closeOnConfirm: false
     },
     function(){

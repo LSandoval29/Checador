@@ -58,7 +58,7 @@
                           @if( Auth::user()->hasPermissionTo('Editar usuarios'))
                             <button onclick="getDataBack({{$project->id}})" class="btn btn-warning btn-sm" data-toggle="tooltip" data-placement="top">
                               <i class="fas fa-pencil-alt"></i>
-                              Actualizar
+                              Editar
                             </button>
                           @endif
 
@@ -249,12 +249,12 @@
   function deleteThis(id,button){
     console.log(id);
     swal({
-      title: "Are you sure?",
-      text: "Your will not be able to recover this imaginary file!",
+      title: "Está seguro?",
+      text: "El proyecto será eliminado!",
       type: "warning",
       showCancelButton: true,
       confirmButtonClass: "btn-danger",
-      confirmButtonText: "Yes, delete it!",
+      confirmButtonText: "Si, eliminar!",
       closeOnConfirm: false
     },
     function(){

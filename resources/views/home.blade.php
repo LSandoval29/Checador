@@ -8,44 +8,39 @@
 <section class="content">
   <div class="container">
     <div class="row">
-      <h5 class=" font-weight-bold text-primary">Actividades de Hoy</h5>
-
-      <div class="col-md-12 mb-3">
-            <div class="card card-primary card-outline">
-              <div class="table-responsive">
-                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                    <thead class="thead-light">
-                      <tr>
-                        <th>Log</th>
-                        <th>Hora</th>
-                        <th>Duración</th>
-                      </tr>
-                    </thead>
-                    <tbody>
+        <h5 class=" font-weight-bold text-primary">Actividades de Hoy</h5>
+        <div class="col-md-12 mb-3">
+              <div class="card card-primary card-outline">
+                <div class="table-responsive">
+                  <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                      <thead class="thead-light">
+                        <tr>
+                          <th>Log</th>
+                          <th>Hora</th>
+                          <th>Duración</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        
+                          <tr>
+                            <td>Entrada</td>
+                            <td>9:30 am</td>
+                            <td>1 hr</td>
+                          </tr>
+                          <tr>
+                            <td>Salida</td>
+                            <td>12:00 pm</td>
+                            <td>NA</td>
+                          </tr>
                       
-                        <tr>
-                          <td>Entrada</td>
-                          <td>9:30 am</td>
-                          <td>1 hr</td>
-                        </tr>
-                        <tr>
-                          <td>Salida</td>
-                          <td>12:00 pm</td>
-                          <td>NA</td>
-                        </tr>
-                     
-                    </tbody>
-                </table>
+                      </tbody>
+                  </table>
+                </div>
               </div>
-            </div>
-      </div>
-
- 
-
-
+        </div>
+      
     <!--Información Personal -->
       <div class="col-md-12 mb-5">
-
         <!-- Profile Image -->
         <div class="card card-primary card-outline">
           <div class="card-body box-profile border-bottom-primary">
