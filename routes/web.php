@@ -8,6 +8,12 @@ Route::get('/', function(){
     return view('checador.reloj');
 });
 
+Route::get('/reloj', function(){
+    return view('checador.index');
+});
+
+
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
@@ -28,6 +34,12 @@ Route::post('/proyecto', 'ProjectController@store')->name('proyecto');
 Route::put('/proyecto/', 'projectController@update')->name('proyecto');
 Route::delete('/proyecto/{id}', 'ProjectController@destroy');
 Route::get('/proyecto_detalle/{id}', 'ProjectController@detail')->name('proyecto_detalle');
+
+//RUTA DE CHECKS:
+Route::post('/check', 'checkController@index')->name('/check');
+
+
+
 
 
 

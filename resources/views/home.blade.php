@@ -6,9 +6,9 @@
 
 <!-- Main content -->
 <section class="content">
-  <div class="container">
+  <div class="container-fluid">
+  <h5 class=" font-weight-bold text-primary mb-3">Actividades de Hoy</h5>
     <div class="row">
-        <h5 class=" font-weight-bold text-primary">Actividades de Hoy</h5>
         <div class="col-md-12 mb-3">
               <div class="card card-primary card-outline">
                 <div class="table-responsive">
@@ -39,8 +39,8 @@
               </div>
         </div>
       
-    <!--Información Personal -->
-      <div class="col-md-12 mb-5">
+      <!--Información Personal -->
+      <div class="col-md-6 mb-5">
         <!-- Profile Image -->
         <div class="card card-primary card-outline">
           <div class="card-body box-profile border-bottom-primary">
@@ -65,6 +65,27 @@
               </li>
               <li class="list-group-item">
                 <b class="text-primary">Email:</b> {{Auth::User()->email}} <a class="float-right"></a>
+              </li>
+            </ul>
+
+          </div>
+          <!-- /.card-body -->
+        </div>
+        <!-- /.card -->
+      </div>
+      <div class="col-md-6 mb-5">
+        <!-- Profile Image -->
+        <div class="card card-primary card-outline">
+          <div class="card-body box-profile border-bottom-primary">
+            <div class="text-left">
+              <h2>Proyecto Actual</h2>
+            </div>
+
+            <h3 class="profile-username text-left my-3">Sistema punto de ventas</h3>
+
+            <ul class="list-group list-group-unbordered mb-3">
+              <li class="list-group-item">
+                <b class="text-primary">Descripción:</b> Crear la pagina web para la tienda online
               </li>
             </ul>
 

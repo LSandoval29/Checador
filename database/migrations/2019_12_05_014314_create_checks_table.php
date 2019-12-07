@@ -20,6 +20,7 @@ class CreateChecksTable extends Migration
             $table->time('horaSalida');
             $table->date('fecha');
             $table->time('duracion');
+            $table->string('status')->default('no_concluida');
             $table->timestamps();
 
             $table->foreign('userId')->references('id')->on('users');
