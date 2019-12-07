@@ -32,7 +32,7 @@ class checkController extends Controller
 		    	$check->duracion = date('H:i:s');
 		    	$checkEntrada = true;
 		    	if($check->save()){
-		    		return view('checador.index', compact('usuario','checkEntrada','numProyectosUsuario','check'));
+		    		return view('checador.index', compact('usuario','checkEntrada', 'checks','numProyectosUsuario','check'));
 		    	}
 			}/*else{
 				//si no se ha concluido la actividad, checar la salida
