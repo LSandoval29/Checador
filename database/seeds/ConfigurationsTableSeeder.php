@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\Configuracion;
+use App\Configuration;
 
 class ConfigurationsTableSeeder extends Seeder
 {
@@ -12,7 +12,7 @@ class ConfigurationsTableSeeder extends Seeder
      */
     public function run()
     {
-        $configuration = new Configuracion();
+        $configuration = new Configuration();
         $configuration->segundos = 15;
         $configuration->save();
     }

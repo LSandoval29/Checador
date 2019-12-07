@@ -13,7 +13,7 @@ class CreateConfiguracionTable extends Migration
      */
     public function up()
     {
-        Schema::create('configuracion', function (Blueprint $table) {
+        Schema::create('configuration', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->integer('segundos');
             $table->timestamps();
@@ -27,6 +27,6 @@ class CreateConfiguracionTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('configuracion');
+        Schema::dropIfExists('configuration');
     }
 }

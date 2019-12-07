@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Configuracion extends Model
+class Configuration extends Model
 {
     protected $fillable = ['segundos'];
 }
