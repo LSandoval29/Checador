@@ -34,7 +34,7 @@ class checkController extends Controller
 		    	if($check->save()){
 		    		return view('checador.index', compact('usuario','checkEntrada', 'checks','numProyectosUsuario','check'));
 		    	}
-			}/*else{
+			}else{
 				//si no se ha concluido la actividad, checar la salida
 				$idCheckPendiente =  $check->last()->id;
 				$check = Check::find($idCheckPendiente);
@@ -57,7 +57,7 @@ class checkController extends Controller
 					$checks = $usuario->checks()->whereStatus('concluida')->get()->count();
 					return view('checador.index', compact('usuario','checks','numProyectosUsuario','check'));
 				}
-			}*/
+			}
 			//return view('checador.index', compact('usuario'));
 		}
 	} 

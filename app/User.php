@@ -43,8 +43,8 @@ class User extends Authenticatable
     ];
 
     public function checks(){
-        
-        return $this->hasMany(Check::class);
+        $user_id = 'userId';
+        return $this->hasMany(Check::class,$user_id);
     }
 
     public function projects(){

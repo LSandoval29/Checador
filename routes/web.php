@@ -38,6 +38,8 @@ Route::get('/proyecto_detalle/{id}', 'ProjectController@detail')->name('proyecto
 //RUTA DE CHECKS:
 Route::post('/check', 'checkController@index')->name('/check');
 
+Route::get('/get_segundos', 'configuracionController@getSegundos')->name('get_segundos');
+
 
 
 

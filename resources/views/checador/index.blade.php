@@ -7,11 +7,11 @@
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="{{asset('app_assets/plugins/fontawesome-free/css/all.min.css')}}">
+  <link rel="stylesheet" href="{{asset('app_assets/vendor/fontawesome-free/css/all.min.css')}}">
   <!-- Ionicons -->
   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-  <!-- Theme style -->
-  <link rel="stylesheet" href="{{asset('app_assets/dist/css/adminlte.min.css')}}">
+  <!-- Custom styles for this template-->
+  <link href="{{ asset('app_assets/css/sb-admin-2.min.css') }}" rel="stylesheet">
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 </head>
@@ -20,8 +20,6 @@
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper" style="margin-left: 0px">
-
-      
 
     <!-- Content Header (Page header) -->
     <section class="content">
@@ -71,7 +69,7 @@
                             <div class="card-body box-profile">
                               <div class="text-center">
                                 <img class="profile-user-img img-fluid img-circle"
-                                     src="{{asset('app_assets/dist/img/userIcon.jpg')}}"
+                                     src="{{asset('app_assets/img/user.png') }}"
                                      alt="User profile picture">
                               </div>
 
@@ -177,13 +175,12 @@
 <!-- ./wrapper -->
 
 <!-- jQuery -->
-<script src="{{asset('app_assets/plugins/jquery/jquery.min.js')}}"></script>
+<script src="{{asset('app_assets/vendor/jquery/jquery.min.js')}}"></script>
 <!-- Bootstrap 4 -->
-<script src="{{asset('app_assets/plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
-<!-- AdminLTE App -->
-<script src="{{asset('app_assets/dist/js/adminlte.min.js')}}"></script>
+<script src="{{asset('app_assets/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
 
-<script src="{{asset('js/tiempoChecador.js')}}"></script>
+
+<script src="{{asset('js/checarTiempo.js')}}"></script>
 
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </body>

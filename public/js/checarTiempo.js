@@ -9,8 +9,6 @@ window.onload = function(){
 	.catch(err => {
 		console.log(err)
 	})
-
-
 }
 
 function cronometro(segundos){
@@ -23,7 +21,7 @@ function cronometro(segundos){
 			segundos--;
 
 			if(segundos <= 5){
-				segundosView.style.color = "red";
+				segundosView.style.color = "orange";
 				segundosView.style.fontSize  = "50px";
 				segundosView.style.fontWeight  = "bold";
 			}
