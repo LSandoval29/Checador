@@ -28,29 +28,23 @@
           <div class="col-12">
 
             @if(!empty($checkEntrada))
-              <div class="callout callout-info" style="margin-top: 1.5%; background: #01c34f; color: white;">
-                <h5><i class="far fa-check-circle"></i> Entrada Registrada</h5>
-                Esta pagina solo estara disponible durante unos segundos.
-
-                <h4 class="segundos float-right" style="font-size: 50px; margin-top: -3%; font-weight: bold;"></h4>
+              <div class="alert alert-success" role="alert">
+                    <h4 class="alert-heading">Entrada Registrada!</h4>
+                    <p>Se cerrará la página al terminar los segundos mostrados.</p>
               </div>
             @endif
 
             @if($check->status == "concluida")
-              <div class="callout callout-info" style="margin-top: 1.5%; background: #01c34f; color: white;">
-                <h5><i class="far fa-check-circle"></i> Salida Registrada</h5>
-                Esta pagina solo estara disponible durante unos segundos.
-
-                <h4 class="segundos float-right" style="font-size: 50px; margin-top: -3%; font-weight: bold;"></h4>
+              <div class="alert alert-warning" role="alert">
+                    <h4 class="alert-heading">Salida Registrada!</h4>
+                    <p>Se cerrará la página al terminar los segundos mostrados.</p>
               </div>
             @endif
 
             @if($check->status == "noAceptado")
-              <div class="callout callout-info" style="margin-top: 1.5%; background: #f74341; color: white;">
-                <h5><i class="fas fa-ban"></i> Check no Registrado</h5>
-                La entrada y la salida no fueron registradas el mismo dia.
-
-                <h4 class="segundos float-right" style="font-size: 50px; margin-top: -3%; font-weight: bold;"></h4>
+              <div class="alert alert-danger" role="alert">
+                    <h4 class="alert-heading"> No Se Realizo El Registro!</h4>
+                    <p>Los registros no se realizaron el mismo dia.</p>
               </div>
             @endif
 
@@ -62,47 +56,15 @@
                   <h4>
                     <div class="container-fluid">
                       <div class="row">
-                        <div class="col-md-3">
-
-                          <!-- Profile Image -->
-                          <div class="card card-primary card-outline">
-                            <div class="card-body box-profile">
-                              <div class="text-center">
-                                <img class="profile-user-img img-fluid img-circle"
-                                     src="{{asset('app_assets/img/user.png') }}"
-                                     alt="User profile picture">
-                              </div>
-
-                              <h3 class="profile-username text-center">{{$usuario->name}}</h3>
-
-                              <p class="text-muted text-center">{{$usuario->lastname}}</p>
-
-                              <ul class="list-group list-group-unbordered mb-3">
-                                <li class="list-group-item">
-                                  <b>F. Nacimiento</b> <a class="float-right">{{$usuario->date_of_birth}}</a>
-                                </li>
-                                <li class="list-group-item">
-                                  <b>Telefono</b> <a class="float-right">{{$usuario->phone_number}}</a>
-                                </li>
-                                <li class="list-group-item">
-                                  <b>Email</b> <a class="float-right">{{$usuario->email}}</a>
-                                </li>
-                              </ul>
-
-                            </div>
-                            <!-- /.card-body -->
-                          </div>
-                          <!-- /.card -->
-                        </div>
-                        <!-- /.col -->
+                        <!-- Tabla checks -->
                         <div class="col-md-9">
-                          <div class="card">
+                          <div class="card border-dark ">
                             <div class="card-header p-2">
                               <ul class="nav nav-pills">
                                 <li class="nav-item"><a class="nav-link active" href="#activity" data-toggle="tab">Actividad</a></li>
                               </ul>
                             </div><!-- /.card-header -->
-                            <div class="card-body">
+                            <div class="card-body text-dark">
                               <div class="tab-content">
                                 <div class="active tab-pane" id="activity">
                                   <!-- Post -->
@@ -110,13 +72,13 @@
                                     @if(!empty($checkEntrada))
                                       <div class="form-group">
                                         <label for="inputName">Info. Check</label>
-                                        <div class="text-muted">
+                                        <div class="text-muted ">
                                           <label class="ml-4"><a href="#">Hora de entrada :</a> {{$check->horaEntrada}}</label>
                                         </div>
                                       </div>
                                     @endif
                                     @if($check->status == "concluida")
-                                      <div class="form-group">
+                                      <div class="form-group ">
                                         <label for="inputName">Info. Check</label>
                                         <div class="text-muted">
                                           <label class="ml-4"><a href="#">Hora de entrada :</a> {{$check->horaEntrada}}</label><br>
@@ -146,6 +108,41 @@
                           </div>
                           <!-- /.nav-tabs-custom -->
                         </div>
+                        <!-- Termina Tabla de Checks-->
+
+
+                        <div class="col-md-3">
+
+                          <!-- Profile Image -->
+                          <div class="card border-dark card-primary card-outline">
+                            <div class="card-body box-profile">
+                              <div class="text-center">
+                                <img class="profile-user-img img-fluid img-circle"
+                                     src="{{asset('app_assets/img/user.png') }}"
+                                     alt="User profile picture">
+                              </div>
+
+                              <h3 class="profile-username text-center">{{$usuario->name}}</h3>
+
+                              <p class="text-muted text-center">{{$usuario->lastname}}</p>
+
+                              <ul class="list-group list-group-unbordered mb-3">
+                                <li class="list-group-item">
+                                  <b>F. Nacimiento</b> <a class="float-right">{{$usuario->date_of_birth}}</a>
+                                </li>
+                                <li class="list-group-item">
+                                  <b>Telefono</b> <a class="float-right">{{$usuario->phone_number}}</a>
+                                </li>
+                                <li class="list-group-item">
+                                  <b>Email</b> <a class="float-right">{{$usuario->email}}</a>
+                                </li>
+                              </ul>
+
+                            </div>
+                            <!-- /.card-body -->
+                          </div>
+                          <!-- /.card -->
+                        </div>
                         <!-- /.col -->
                       </div>
                       <!-- /.row -->
@@ -157,6 +154,9 @@
                 <!-- /.col -->
               </div>
             </div>
+            
+
+
             <!-- /.invoice -->
           </div><!-- /.col -->
         </div><!-- /.row -->

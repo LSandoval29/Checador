@@ -33,6 +33,17 @@ class UsersTableSeeder extends Seeder
         $user->password = bcrypt("contraseña123");
         $user->role = 2;
         $user->save();
+
+        $user = new User;
+        $user->name = "Diego";
+        $user->lastname = "Ceseña";
+        $user->matricula = "2016082297";
+        $user->email="diego@mail.com";
+        $user->date_of_birth="2019-11-13";
+        $user->phone_number = "6121539429";
+        $user->password = bcrypt("contraseña123");
+        $user->role = 2;
+        $user->save();
         
     }
 }
