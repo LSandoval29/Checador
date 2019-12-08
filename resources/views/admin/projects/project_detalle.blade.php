@@ -63,7 +63,7 @@
                 @if(Auth::user()->role == 1)
                   <td class="py-0 align-middle">
                     <div class="btn-group btn-group-sm">
-                      <a href="/usuario_detail/{{$user->id}}" class="btn btn-info"><i class="fas fa-eye"></i></a>
+                      <a href="/usuario_detalle/{{$user->id}}" class="btn btn-info"><i class="fas fa-eye"></i></a>
                     </div>
                   </td>
                 @endif
