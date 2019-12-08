@@ -6,7 +6,7 @@
 <section class="content">
   <div class="row">
     <div class="col-md-6">
-      <div class="card card-primary border-bottom-primary">
+      <div class="card card-primary border-bottom-primary border-left-primary">
         <div class="card-header">
           <h3 class="card-title">Proyecto - Detalles</h3>
         </div>
@@ -42,7 +42,7 @@
     </div>
     <div class="col-md-6">
 
-      <div class="card card-info border-bottom-primary">
+      <div class="card card-info border-bottom-primary border-left-primary">
         <div class="card-header">
           <h3 class="card-title">Miembros del Proyecto</h3>
         </div>
@@ -50,27 +50,25 @@
           <table class="table">
             <thead>
               <tr>
-                <th class="text-primary">Nombre</th>
+                <th class="text-primary">Nombre:</th>
+                @if(Auth::user()->role == 1)
                 <th class="text-primary">Ver</th>
+                @endif
               </tr>
             </thead>
             <tbody>
+            @foreach($users as $user)
               <tr>
-                <td>Loir </td>
-                <td class="py-0 align-middle">
-                  <div class="btn-group btn-group-sm">
-                    <a href="#" class="btn btn-info"><i class="fas fa-eye"></i></a>
-                  </div>
-                </td>
+                <td>* {{$user->name}} {{$user->lastname}}</td>
+                @if(Auth::user()->role == 1)
+                  <td class="py-0 align-middle">
+                    <div class="btn-group btn-group-sm">
+                      <a href="/usuario_detail/{{$user->id}}" class="btn btn-info"><i class="fas fa-eye"></i></a>
+                    </div>
+                  </td>
+                @endif
                </tr>
-               <tr>
-                <td>Diego</td>
-                <td class="py-0 align-middle">
-                  <div class="btn-group btn-group-sm">
-                    <a href="#" class="btn btn-info"><i class="fas fa-eye"></i></a>
-                  </div>
-                </td>
-               </tr>
+            @endforeach
 
             </tbody>
           </table>

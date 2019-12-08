@@ -136,11 +136,11 @@
                   <div class="timeline timeline-inverse">
                       <div>
                         @foreach($misProyectos as $proyecto)
-                          <i class="fas fa-project-diagram bg-info"></i>
+                          
                           <div class="timeline-item mb-2">
                             <span class="time"><i class="far fa-clock"></i> {{$proyecto->created_at}}</span>
 
-                            <h3 class="timeline-header border-0"><a href="proyecto_detail/{{$proyecto->id}}">{{$proyecto->nombre}}</a>
+                            <h3 class="timeline-header border-0"><a href="proyecto_detalle/{{$proyecto->id}}">    <i class="nav-icon fas fa-project-diagram"></i> {{$proyecto->nombre}}</a>
                             </h3>
                           </div>
                         @endforeach

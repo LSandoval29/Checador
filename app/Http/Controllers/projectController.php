@@ -103,8 +103,14 @@ class projectController extends Controller
 
     public function detail($id)
     {
-        $project = Project::find($id);
+        if(Auth::user()->hasPermissionTo('Administrar usuarios') || 
+        Auth::user()->hasPermissionTo('Visualizar usuarios') ){
+         $project = Project::find($id);
+         $users = $project->users()->get();
+         return view('admin.projects.project_detalle', compact('project', 'users'));
+        }else{
+            return redirect()->back()->with('error','No permitido');
+        }
 
-        return view('admin.projects.project_detalle', compact('project'));
     }
 }

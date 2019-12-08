@@ -4,7 +4,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title> Checador DASC-UABCS </title>
+  <title> Checador | DASC </title>
 
   <!-- Custom fonts for this template-->
   <link href="{{ asset('app_assets/vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
