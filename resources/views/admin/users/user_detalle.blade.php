@@ -10,7 +10,7 @@
 
         <!-- Profile Image -->
         <div class="card card-primary card-outline">
-          <div class="card-body box-profile">
+          <div class="card-body box-profile border-bottom-primary">
             <div class="text-center">
               <img class="profile-user-img img-fluid img-circle"
                    src="{{asset('app_assets/img/user.png')}}"
@@ -55,7 +55,7 @@
               @endif
             </ul>
           </div><!-- /.card-header -->
-          <div class="card-body">
+          <div class="card-body border-bottom-primary">
             <div class="tab-content">
               <div class="active tab-pane" id="activity">
                 <!-- Post -->
@@ -142,6 +142,8 @@
 
                             <h3 class="timeline-header border-0"><a href="proyecto_detalle/{{$proyecto->id}}">    <i class="nav-icon fas fa-project-diagram"></i> {{$proyecto->nombre}}</a>
                             </h3>
+                            <!-- Divider -->
+                            <hr class="sidebar-divider my-0">
                           </div>
                         @endforeach
                       </div>
