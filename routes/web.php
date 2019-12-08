@@ -12,7 +12,9 @@ Route::get('/reloj', function(){
     return view('checador.index');
 });
 
-
+Route::get('/configuracion', function(){
+	return view('admin.config.index');
+});
 
 Auth::routes();
 
@@ -26,6 +28,8 @@ Route::get('/vista_previa/{id}', 'UserController@previous')->name('vista_previa'
 Route::post('/user/','UserController@store')->name('user');
 Route::put('/user/','UserController@update')->name('user');
 Route::delete('/userdestroy/{id}', 'userController@destroy');
+Route::post('/inscribirAProyecto/{id}', 'userController@inscribirAProyecto')->name('inscribirAProyecto');
+
 
 //RUTAS DE PROYECTOS:
 Route::get('/projects/', 'projectController@index')->name('project');
@@ -38,7 +42,10 @@ Route::get('/proyecto_detalle/{id}', 'ProjectController@detail')->name('proyecto
 //RUTA DE CHECKS:
 Route::post('/check', 'checkController@index')->name('/check');
 
+//RUTAS DE CONFIG:
 Route::get('/get_segundos', 'configuracionController@getSegundos')->name('get_segundos');
+Route::post('/config_segundos', 'configuracionController@update')->name('config_segundos');
+
 
 
 

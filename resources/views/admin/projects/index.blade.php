@@ -11,7 +11,7 @@
     <div class="card shadow mb-4">
       <div class="card-header py-3">
       @if( Auth::user()->hasPermissionTo('Editar usuarios'))
-        <button class="btn btn-primary btn-icon-split m-0 float-right " data-toggle="modal" data-target="#mymodal">
+        <button class="btn btn-success btn-icon-split m-0 float-right " data-toggle="modal" data-target="#mymodal">
             <span class="icon text-white-50">
               <i class="nav-icon fas fa-project-diagram"></i>
             </span>
@@ -62,7 +62,7 @@
                             </button>
                           @endif
 
-                            <a class="btn btn-primary btn-sm" href="/proyecto_detalle/{{$project->id}}">
+                            <a class="btn btn-info btn-sm" href="/proyecto_detalle/{{$project->id}}">
                             <i class="fas fa-folder"></i>
                               Ver
                             </a>

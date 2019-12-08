@@ -21,7 +21,7 @@ class checkController extends Controller
 			$check = Check::where('status','no_concluida')->where('userId', $idUsuario)->get();
 			$checks = $usuario->checks()->whereStatus('concluida')->get()->count();//Numero total de checks
             $numProyectosUsuario = $usuario->projects()->get()->count();//Numero total de proyectos
-			//si no hay un check sin concluir crea uno nuevo
+			//Crear un nuevo check si no hay uno creado:
 			if(empty($check->last())){
 				
 				$check = new Check();
@@ -35,10 +35,10 @@ class checkController extends Controller
 		    		return view('checador.index', compact('usuario','checkEntrada', 'checks','numProyectosUsuario','check'));
 		    	}
 			}else{
-				//si no se ha concluido la actividad, checar la salida
+				//si no se ha concluido la actividad, checar la salida:
 				$idCheckPendiente =  $check->last()->id;
 				$check = Check::find($idCheckPendiente);
-				//verificar que el check se hizo el mismo dia
+				//verificar que el check se hizo el mismo dia:
 				if($check->fecha == date('Y-m-d')){
 					$entrada = new DateTime($check->horaEntrada);
 					$salida = new DateTime(date('H:i:s'));
@@ -53,12 +53,11 @@ class checkController extends Controller
 				}
 				
 				if($check->save()){
-					//madar actualizados los ckecks
+					//mandar actualizados los checks(UPDATE)
 					$checks = $usuario->checks()->whereStatus('concluida')->get()->count();
 					return view('checador.index', compact('usuario','checks','numProyectosUsuario','check'));
 				}
 			}
-			//return view('checador.index', compact('usuario'));
 		}
 	} 
 }

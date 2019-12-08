@@ -22,18 +22,15 @@
         @include('layouts.nav')
 
         <!-- Begin Page Content -->
-        <div class="container-fluid">
+        <div class="container-fluid mx-auto">
 
           <!-- Page Heading -->
           <div class="row">
-            <div class="col-3">
-              <h1 class="h3 mb-4 text-gray-800"></h1>
-            </div>
-            <div class="col-9">
+            <div class="col-12">
               
               @if (session('success'))
-              <div class="alert alert-success alert-dismissible fade show" role="alert">
-                <strong>Great!</strong> The process has finished successfully.
+              <div class="alert alert-success" role="alert">
+                <strong>Muy bien!</strong> El proceso a terminado satisfactoriamente!.
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
                 </button>

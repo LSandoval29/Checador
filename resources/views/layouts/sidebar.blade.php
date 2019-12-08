@@ -3,8 +3,12 @@
 
 <!-- Sidebar - Brand -->
 <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{URL::to('/home')}}">
-  
-  <div class="sidebar-brand-text mx-3">Checador <b>DASC</b></div>
+    <div class="card-body box-profile">
+      <img class="img-fluid  rounded-circle"
+          src="{{asset('app_assets/img/dasc.jpg') }}"
+          alt="DASC picture">
+    </div>
+    <div class="sidebar-brand-text mx-3">Checador <b>DASC</b></div>
 </a>
 
 <!-- Divider -->
@@ -36,8 +40,8 @@
     <span>Proyectos</span></a>
 </li>
 
-<li class="nav-item">
-  <a class="nav-link" href="#">
+<li class="nav-item {{ (request()->is('configuracion*')) ? 'active' : '' }}">
+  <a class="nav-link" href="{{URL::to('/configuracion')}}">
     <i class="fas fa-cogs "></i>   
     <span>Configuración</span></a>
 </li>

@@ -13,10 +13,10 @@ class UsersTableSeeder extends Seeder
     public function run()
     {
         $user = new User;
-        $user->name = "Loir";
-        $user->lastname = "Sandoval";
+        $user->name = "Juanito";
+        $user->lastname = "Pérez";
         $user->matricula = "2016082296";
-        $user->email="loir@mail.com";
+        $user->email="admin@mail.com";
         $user->date_of_birth="2019-11-13";
         $user->phone_number = "6121539429";
         $user->password = bcrypt("contraseña123");
@@ -24,10 +24,10 @@ class UsersTableSeeder extends Seeder
         $user->save();
 
         $user = new User;
-        $user->name = "Juan";
-        $user->lastname = "Perez";
+        $user->name = "Loir";
+        $user->lastname = "Sandoval";
         $user->matricula = "2016082295";
-        $user->email="juan@mail.com";
+        $user->email="loir@mail.com";
         $user->date_of_birth="2019-11-13";
         $user->phone_number = "6121539429";
         $user->password = bcrypt("contraseña123");

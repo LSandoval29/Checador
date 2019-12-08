@@ -20,7 +20,7 @@
 
 </head>
 
-<body class="bg-gradient-primary">
+<body class="bg-gray-300">
 
   <div class="container">
 
@@ -57,13 +57,7 @@
                         </span>
                      @enderror
                     </div>
-                    <div class="form-group">
-                      <div class="custom-control custom-checkbox small">
-                        <input type="checkbox" class="custom-control-input" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-                        <label class="custom-control-label" for="customCheck">{{ __('Remember Me') }}</label>
-                      </div>
-                    </div>
-                    <button type="submit" class="btn btn-primary btn-user btn-block">
+                    <button type="submit" class="btn btn-success btn-user btn-block">
                         {{ __('Iniciar Sesión') }}
                     </button>
                   </form> 

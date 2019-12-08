@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Spatie\Permission\Models\Role;
 use App\User;
+use App\Project;
 use Auth;
 
 class userController extends Controller
@@ -102,17 +103,19 @@ class userController extends Controller
         }   
     }
 
-    public function detail($id)
+    public function detail($id=null)
     {
-        if(Auth::user()->hasPermissionTo('Administrar usuarios') || 
-           Auth::user()->hasPermissionTo('Visualizar usuarios') ){
-
-            $usuario = User::find($id);
-            return view('admin.users.user_detalle',compact('usuario'));
-
-        }else{
-            return redirect()->back()->with('error','No permitido');
+        $usuario = User::find($id);
+        if(empty($usuario)){
+            $usuario = Auth::user();
         }
+    
+        $proyectos = Project::where('status','active')->get();
+        $checks = $usuario->checks()->whereStatus('concluida')->get()->count();
+        $numProyectosUsuario = $usuario->projects()->get()->count();
+        $misProyectos = $usuario->projects()->get();
+        $infoChecks = $usuario->checks()->whereStatus('concluida')->orderBy('id','desc')->limit(4)->get();
+        return view('admin.users.user_detalle',compact('usuario','proyectos','checks','numProyectosUsuario','infoChecks','misProyectos'));
     }
 
      public function previous($id)
@@ -127,6 +130,31 @@ class userController extends Controller
             return redirect()->back()->with('error','No permitido');
         }
     }
+
+    public function inscribirAProyecto(Request $request, $id)
+    {
+        if(Auth::user()->hasPermissionTo('Administrar usuarios') || 
+           Auth::user()->hasPermissionTo('Agregar usuarios') ){
+            $usuario = User::find($id);
+            $ya_inscrito = sizeof($usuario->projects()->where('project_id',$request['proyecto'])->get());
+            if($ya_inscrito == 0){
+                
+                $usuario->projects()->attach($request['proyecto']);
+            
+            }else{
+                 return redirect()->back()->with('ya_inscrito','error'); 
+            }
+            
+            return redirect()->back()->with('success','ok'); 
+        
+        }else{
+            return redirect()->back()->with('error','No permitido');
+        }
+          
+        
+        //return redirect()->back()->with('error','ok');
+    }
+
     
 
 }
