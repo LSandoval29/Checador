@@ -15,22 +15,22 @@
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 </head>
+
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
 
-  <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper" style="margin-left: 0px">
 
-    <!-- Content Header (Page header) -->
     <section class="content">
-      <div class="container-fluid">
+      <div class="container-fluid mt-5">
         <div class="row">
           <div class="col-12">
 
             @if(!empty($checkEntrada))
               <div class="alert alert-success" role="alert">
-                    <h4 class="alert-heading">Entrada Registrada!</h4>
-                    <p>Se cerrará la página al terminar los segundos mostrados.</p>
+                    <h4 class="segundos float-left" style="font-size: 50px; margin-top: -1%; font-weight: italic;"></h4>
+                    <h4 class="alert-heading float-right">Entrada Registrada <i class="far fa-check-circle"></i></h4>
+                    <p class="text-center">Se cerrará la página al terminar los segundos mostrados.</p>
               </div>
             @endif
 
@@ -38,6 +38,8 @@
               <div class="alert alert-warning" role="alert">
                     <h4 class="alert-heading">Salida Registrada!</h4>
                     <p>Se cerrará la página al terminar los segundos mostrados.</p>
+
+                    <h4 class="segundos float-right" style="font-size: 50px; margin-top: -3%; font-weight: bold;"></h4>
               </div>
             @endif
 
@@ -45,6 +47,8 @@
               <div class="alert alert-danger" role="alert">
                     <h4 class="alert-heading"> No Se Realizo El Registro!</h4>
                     <p>Los registros no se realizaron el mismo dia.</p>
+
+                    <h4 class="segundos float-right" style="font-size: 50px; margin-top: -3%; font-weight: bold;"></h4>
               </div>
             @endif
 
@@ -71,32 +75,32 @@
                                   <div class="card-body">
                                     @if(!empty($checkEntrada))
                                       <div class="form-group">
-                                        <label for="inputName">Info. Check</label>
+                                        <label for="inputName">Información del check:</label>
                                         <div class="text-muted ">
-                                          <label class="ml-4"><a href="#">Hora de entrada :</a> {{$check->horaEntrada}}</label>
+                                          <label class="ml-4"><a href="#">Hora de entrada:</a> {{$check->horaEntrada}}</label>
                                         </div>
                                       </div>
                                     @endif
                                     @if($check->status == "concluida")
                                       <div class="form-group ">
-                                        <label for="inputName">Info. Check</label>
+                                        <label for="inputName">Información del check:</label>
                                         <div class="text-muted">
-                                          <label class="ml-4"><a href="#">Hora de entrada :</a> {{$check->horaEntrada}}</label><br>
-                                          <label class="ml-4"><a href="#">Hora de salida :</a> {{$check->horaSalida}}</label><br>
-                                          <label class="ml-4"><a href="#">Duración :</a> {{$check->duracion}}</label>
+                                          <label class="ml-4"><a href="#">Hora de entrada:</a> {{$check->horaEntrada}}</label><br>
+                                          <label class="ml-4"><a href="#">Hora de salida:</a> {{$check->horaSalida}}</label><br>
+                                          <label class="ml-4"><a href="#">Duración:</a> {{$check->duracion}}</label>
                                         </div>
                                       </div>
                                     @endif
                                     <div class="form-group">
                                       <label for="inputName">Checks</label>
                                       <div class="text-muted">
-                                        <label class="ml-4"><a href="#">Total checks :</a> {{$checks}}</label>
+                                        <label class="ml-4"><a href="#">Total checks:</a> {{$checks}}</label>
                                       </div>
                                     </div>
                                     <div class="form-group">
                                       <label for="inputDescription">Proyectos</label>
                                       <div class="text-muted">
-                                        <label class="ml-4"><a href="#">Total proyectos :</a>{{$numProyectosUsuario}}</label>
+                                        <label class="ml-4"><a href="#">Total proyectos:</a>{{$numProyectosUsuario}}</label>
                                       </div>
                                     </div>
                                   </div>
@@ -154,34 +158,27 @@
                 <!-- /.col -->
               </div>
             </div>
-            
-
-
+        
             <!-- /.invoice -->
           </div><!-- /.col -->
         </div><!-- /.row -->
       </div><!-- /.container-fluid -->
     </section>
-    <!-- /.content -->
+    
   </div>
-  <!-- /.content-wrapper -->
-
-  <!-- Control Sidebar -->
+  
   <aside class="control-sidebar control-sidebar-dark">
     <!-- Control sidebar content goes here -->
   </aside>
-  <!-- /.control-sidebar -->
+
 </div>
-<!-- ./wrapper -->
+
 
 <!-- jQuery -->
 <script src="{{asset('app_assets/vendor/jquery/jquery.min.js')}}"></script>
 <!-- Bootstrap 4 -->
 <script src="{{asset('app_assets/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
-
-
 <script src="{{asset('js/checarTiempo.js')}}"></script>
-
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </body>
 </html>

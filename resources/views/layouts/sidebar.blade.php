@@ -30,7 +30,7 @@
     <span>Usuarios</span></a>
 </li>
 
-<li class="nav-item">
+<li class="nav-item {{ (request()->is('projects*')) ? 'active' : '' }}">
   <a class="nav-link" href="{{URL::to('/projects')}}">
     <i class="nav-icon fas fa-project-diagram"></i>
     <span>Proyectos</span></a>

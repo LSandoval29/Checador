@@ -21,9 +21,9 @@ function cronometro(segundos){
 			segundos--;
 
 			if(segundos <= 5){
-				segundosView.style.color = "orange";
+				segundosView.style.color = "red";
 				segundosView.style.fontSize  = "50px";
-				segundosView.style.fontWeight  = "bold";
+				segundosView.style.fontWeight  = "italic";
 			}
 
 			if(segundos <= 0){
