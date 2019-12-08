@@ -111,7 +111,7 @@ class userController extends Controller
         }
     
         $proyectos = Project::where('status','active')->get();
-        $checks = $usuario->checks()->whereStatus('concluida')->get()->count();
+        $checks = $usuario->checks()->whereStatus('no_concluida')->get()->count();
         $numProyectosUsuario = $usuario->projects()->get()->count();
         $misProyectos = $usuario->projects()->get();
         $infoChecks = $usuario->checks()->whereStatus('concluida')->orderBy('id','desc')->limit(4)->get();

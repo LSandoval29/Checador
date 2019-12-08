@@ -18,7 +18,8 @@ Route::get('/configuracion', function(){
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+//ruta de usuario comunt
+Route::get('/home', 'userController@detail')->name('home');
 
 //RUTAS DE USUARIOS:
 Route::get('/users/', 'userController@index')->name('users');
