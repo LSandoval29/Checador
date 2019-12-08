@@ -4,7 +4,7 @@
 
 
 <div class="col-md-12 mx-auto">
-    <div class="card card-primary border-bottom-primary">
+    <div class="card card-dark border-bottom-dark">
       <div class="card-header">
         <h5 class="m-0 font-weight-bold text-primary">Actualizar segundos de pantalla de espera</h5>
       </div>

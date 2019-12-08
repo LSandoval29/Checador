@@ -5,54 +5,20 @@
 <!-- Main content -->
 <section class="content">
   <div class="row">
-    <div class="col-md-6">
-      <div class="card card-primary border-bottom-primary border-left-primary">
-        <div class="card-header">
-          <h3 class="card-title">Proyecto - Detalles</h3>
-        </div>
-        <div class="card-body">
-          <div class="form-group">
-            <label for="inputName" class="text-primary">Nombre del Proyecto:</label>
-            <div class="text-muted">
-            	<label>{{$project->nombre}}</label>
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="inputDescription" class="text-primary">Descripción:</label>
-            <div class="text-muted">
-            	<label>{{$project->descripcion}}</label>
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="inputStatus" class="text-primary">Feha de Inicio:</label>
-            <div class="text-muted">
-            	<label>{{$project->fechaInicio}}</label>
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="inputClientCompany" class="text-primary">Fecha de Cierre:</label>
-            <div class="text-muted">
-            	<label>{{$project->fechaCierre}}</label>
-            </div>
-          </div>
-        </div>
-        <!-- /.card-body -->
-      </div>
-      <!-- /.card -->
-    </div>
+    
     <div class="col-md-6">
 
-      <div class="card card-info border-bottom-primary border-left-primary">
+      <div class="card card-info border-bottom-dark">
         <div class="card-header">
-          <h3 class="card-title">Miembros del Proyecto</h3>
+          <h3 class="card-title m-0 font-weight-bold text-primary">Miembros del Proyecto</h3>
         </div>
         <div class="card-body p-0">
           <table class="table">
             <thead>
               <tr>
-                <th class="text-primary">Nombre:</th>
+                <th class="text-dark">Nombre:</th>
                 @if(Auth::user()->role == 1)
-                <th class="text-primary">Ver</th>
+                <th class="text-dark">Ver</th>
                 @endif
               </tr>
             </thead>
@@ -77,6 +43,44 @@
       </div>
       <!-- /.card -->
     </div>
+
+    <div class="col-md-6">
+      <div class="card card-dark border-bottom-dark">
+        <div class="card-header">
+          <h3 class="card-title m-0 font-weight-bold text-primary">Proyecto - Detalles</h3>
+        </div>
+        <div class="card-body">
+          <div class="form-group">
+            <label for="inputName" class="text-dark">Nombre del Proyecto:</label>
+            <div class="text-muted">
+              <label>{{$project->nombre}}</label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="inputDescription" class="text-dark">Descripción:</label>
+            <div class="text-muted">
+              <label>{{$project->descripcion}}</label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="inputStatus" class="text-dark">Feha de Inicio:</label>
+            <div class="text-muted">
+              <label>{{$project->fechaInicio}}</label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="inputClientCompany" class="text-dark">Fecha de Cierre:</label>
+            <div class="text-muted">
+              <label>{{$project->fechaCierre}}</label>
+            </div>
+          </div>
+        </div>
+        <!-- /.card-body -->
+      </div>
+      <!-- /.card -->
+    </div>
+
+
   </div>
 </section>
 <!-- /.content -->

@@ -28,9 +28,9 @@
                       <tr>
                         <th>Nombre(s)</th>
                         <th>Apellidos</th>
-                        <th>Fecha de nacimiento</th>
                         <th>Teléfono</th>
                         <th>Email</th>
+                        <th>Matrícula</th>
                         <th>Acciones</th>
                       </tr>
                     </thead>
@@ -38,9 +38,9 @@
                       <tr>
                         <th>Nombre(s)</th>
                         <th>Apellidos</th>
-                        <th>Fecha de nacimiento</th>
                         <th>Teléfono</th>
                         <th>Email</th>
+                        <th>Matrícula</th>
                         <th>Acciones</th> 
                       </tr>
                     </tfoot>
@@ -50,9 +50,9 @@
                         <tr>
                           <td>{{$user->name}}</td>
                           <td>{{$user->lastname}}</td>
-                          <td>{{$user->date_of_birth}}</td>
                           <td>{{$user->phone_number}}</td>
                           <td>{{$user->email}}</td>
+                          <td>{{$user->matricula}}</td>
                           <td>
                           @if( Auth::user()->hasPermissionTo('Editar usuarios'))
                             <button onclick="deleteThis({{$user->id}},this)" class="btn btn-danger btn-sm" data-toggle="tooltip" data-placement="top">
@@ -154,6 +154,15 @@
                   </div>
                   <small id="emailHelp" class="form-text text-muted">8 character min.</small>
 				      </div>
+              <div class="form-group">
+                  <label for="exampleInputPassword1">Matrícula</label>
+                  <div class="input-group mb-3">
+                      <div class="input-group-prepend">
+                      <span class="input-group-text" id="basic-addon1">M</span>
+                      </div>
+                      <input type="matricula" name="matricula" id="matricula" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon1" required>
+                  </div>
+              </div>
 
               <div class="modal-footer">
                 <button class="btn btn-secondary" type="button" data-dismiss="modal">
@@ -238,6 +247,15 @@
                   </div>
                   <small id="emailHelp" class="form-text text-muted">8 character min.</small>
 				      </div>
+              <div class="form-group">
+                  <label for="exampleInputPassword1">Matrícula</label>
+                  <div class="input-group mb-3">
+                      <div class="input-group-prepend">
+                      <span class="input-group-text" id="basic-addon1">M</span>
+                      </div>
+                      <input type="matricula" name="matricula" id="matricula_edit" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon1" required>
+                  </div>
+              </div>
 
               <div class="modal-footer">
                 <button class="btn btn-secondary" type="button" data-dismiss="modal">
@@ -281,7 +299,7 @@
 		    	$("#date_of_birth_edit").val(response.data.date_of_birth)
 		    	$("#phone_number_edit").val(response.data.phone_number)
 		    	$("#email_edit").val(response.data.email) 
-
+          $("#matricula_edit").val(response.data.matricula) 
 		    	$("#id").val(id) 
 
 		    }else{

@@ -31,6 +31,7 @@
                 </div>
                 <div class="reloj">
                     <p id="hora" class="hora"></p>
+                    <h3 class="help-block text-center my-4">La Paz Baja California Sur, México.</h3>
                 </div>
                 <form action="/check" method="POST">
                     @csrf

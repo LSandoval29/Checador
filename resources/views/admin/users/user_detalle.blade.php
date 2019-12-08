@@ -6,43 +6,9 @@
 <section class="content">
   <div class="container-fluid">
     <div class="row">
-      <div class="col-md-6">
-
-        <!-- Profile Image -->
-        <div class="card card-primary card-outline">
-          <div class="card-body box-profile border-bottom-primary">
-            <div class="text-center">
-              <img class="profile-user-img img-fluid img-circle"
-                   src="{{asset('app_assets/img/user.png')}}"
-                   alt="User profile picture">
-            </div>
-            <!-- Divider -->
-            <hr class="sidebar-divider">
-            <h3 class="profile-username text-center">{{$usuario->name}} {{$usuario->lastname}}</h3>
-
-            <ul class="list-group list-group-unbordered mb-3">
-              <li class="list-group-item">
-                <b class="text-primary">Cumpleaños:</b> <a class="float-right">{{$usuario->date_of_birth}}</a>
-              </li>
-              <li class="list-group-item">
-                <b class="text-primary">Celular:</b> <a class="float-right">{{$usuario->phone_number}}</a>
-              </li>
-              <li class="list-group-item">
-                <b class="text-primary">Email:</b> <a class="float-right">{{$usuario->email}}</a>
-              </li>
-              <li class="list-group-item">
-                <b class="text-primary">Matrícula:</b> <a class="float-right">{{$usuario->matricula}}</a>
-              </li>
-            </ul>
-
-          </div>
-          <!-- /.card-body -->
-        </div>
-        <!-- /.card -->
-      </div>
-      <!-- /.col -->
       
-      <div class="col-md-6 mt-4">
+      
+      <div class="col-md-6">
         <div class="card">
           <div class="card-header p-2">
             <ul class="nav nav-pills">
@@ -55,19 +21,19 @@
               @endif
             </ul>
           </div><!-- /.card-header -->
-          <div class="card-body border-bottom-primary">
+          <div class="card-body border-dark border-bottom-dark">
             <div class="tab-content">
               <div class="active tab-pane" id="activity">
                 <!-- Post -->
                 <div class="card-body">
 		          <div class="form-group">
-		            <label class="text-primary">Número de checks:</label>
+		            <label class="text-dark">Número de checks:</label>
 		            <div class="text-muted">
 		            	<label>{{$checks}}</label>
 		            </div>
 		          </div>
 		          <div class="form-group">
-		            <label class="text-primary">Proyectos en los que está inscrito:</label>
+		            <label class="text-dark">Proyectos en los que está inscrito:</label>
 		            <div class="text-muted">
 		            	<label>{{$numProyectosUsuario}}</label>
 		            </div>
@@ -111,8 +77,10 @@
                   <form class="form-horizontal" method="POST" action="/inscribirAProyecto/{{$usuario->id}}">
                     @csrf
                     <div class="form-group row">
-                      <label for="inputName" class="col-sm-2 col-form-label">Nombre del proyecto:</label>
-                      <div class="col-sm-10">
+                      <div class="col-lg-10">
+                         <label for="inputName" class="col-form-label">Nombre del proyecto:</label>
+                      </div>
+                      <div class="col-lg-10">
                         <select class="form-control" name="proyecto">
                           @foreach($proyectos as $proyecto)
                           <option value="{{$proyecto->id}}">{{$proyecto->nombre}}</option>
@@ -161,7 +129,40 @@
         </div>
         <!-- /.nav-tabs-custom -->
       </div>
-      
+      <!-- /.col -->
+      <div class="col-md-6">
+<!-- Profile Image -->
+        <div class="card card-primary card-outline">
+          <div class="card-body box-profile border-bottom-dark">
+            <div class="text-center">
+              <img class="profile-user-img img-fluid img-circle"
+                   src="{{asset('app_assets/img/user.png')}}"
+                   alt="User profile picture">
+            </div>
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+            <h3 class="profile-username text-center text-primary">{{$usuario->name}} {{$usuario->lastname}}</h3>
+
+            <ul class="list-group list-group-unbordered mb-3">
+              <li class="list-group-item">
+                <b class="text-dark">Cumpleaños:</b> <a class="float-right">{{$usuario->date_of_birth}}</a>
+              </li>
+              <li class="list-group-item">
+                <b class="text-dark">Celular:</b> <a class="float-right">{{$usuario->phone_number}}</a>
+              </li>
+              <li class="list-group-item">
+                <b class="text-dark">Email:</b> <a class="float-right">{{$usuario->email}}</a>
+              </li>
+              <li class="list-group-item">
+                <b class="text-dark">Matrícula:</b> <a class="float-right">{{$usuario->matricula}}</a>
+              </li>
+            </ul>
+
+          </div>
+          <!-- /.card-body -->
+        </div>
+        <!-- /.card -->
+      </div>
       <!-- /.col -->
     </div>
     <!-- /.row -->
