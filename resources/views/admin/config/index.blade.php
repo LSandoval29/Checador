@@ -13,7 +13,7 @@
         <div class="card-body">
           <div class="row">
             <div class="form-group">
-                <input type="number" class="form-control" placeholder="Ingrese los segundos:" name="segundos">
+                <input type="number" class="form-control" placeholder="Ingrese los segundos:" name="segundos" required>
             </div>
             <div class="form-group">
                 <button type="submit" class="btn btn-success">Guardar</button>
