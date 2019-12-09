@@ -8,7 +8,7 @@
     
     <div class="col-md-6">
 
-      <div class="card card-info border-bottom-dark">
+      <div class="card card-info border-bottom-primary">
         <div class="card-header">
           <h3 class="card-title m-0 font-weight-bold text-primary">Miembros del Proyecto</h3>
         </div>
@@ -45,7 +45,7 @@
     </div>
 
     <div class="col-md-6">
-      <div class="card card-dark border-bottom-dark">
+      <div class="card card-dark border-bottom-primary">
         <div class="card-header">
           <h3 class="card-title m-0 font-weight-bold text-primary">Proyecto - Detalles</h3>
         </div>

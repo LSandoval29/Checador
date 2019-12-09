@@ -1,12 +1,12 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use DateTime;
 use Illuminate\Http\Request;
 use App\Check;
 use App\User;
 use Auth;
-use DataTime;
+
 
 class checkController extends Controller
 {
@@ -19,7 +19,7 @@ class checkController extends Controller
 		}else{
 			$idUsuario = $usuario->id;
 			$check = Check::where('status','no_concluida')->where('userId', $idUsuario)->get();
-			$checks = $usuario->checks()->whereStatus('concluida')->get()->count();//Numero total de checks
+			$checks = $usuario->checks()->whereStatus('no_concluida')->get()->count();//Numero total de checks
             $numProyectosUsuario = $usuario->projects()->get()->count();//Numero total de proyectos
 			//Crear un nuevo check si no hay uno creado:
 			if(empty($check->last())){

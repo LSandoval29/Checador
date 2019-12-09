@@ -21,7 +21,7 @@
               @endif
             </ul>
           </div><!-- /.card-header -->
-          <div class="card-body border-dark border-bottom-dark">
+          <div class="card-body border-dark border-bottom-primary">
             <div class="tab-content">
               <div class="active tab-pane" id="activity">
                 <!-- Post -->
@@ -133,7 +133,7 @@
       <div class="col-md-6">
 <!-- Profile Image -->
         <div class="card card-primary card-outline">
-          <div class="card-body box-profile border-bottom-dark">
+          <div class="card-body box-profile border-bottom-primary">
             <div class="text-center">
               <img class="profile-user-img img-fluid img-circle"
                    src="{{asset('app_assets/img/user.png')}}"

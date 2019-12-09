@@ -29,26 +29,27 @@
             @if(!empty($checkEntrada))
               <div class="alert alert-success" role="alert">
                     <h4 class="segundos float-left" style="font-size: 50px; margin-top: -1%; font-weight: italic;"></h4>
-                    <h4 class="alert-heading float-right">Entrada Registrada <i class="far fa-check-circle"></i></h4>
+                    <h4 class="alert-heading float-right">Entrada registrada. <i class="far fa-check-circle"></i></h4>
                     <p class="text-center">Se cerrará la página al terminar los segundos mostrados.</p>
               </div>
             @endif
 
             @if($check->status == "concluida")
-              <div class="alert alert-warning" role="alert">
-                    <h4 class="alert-heading">Salida Registrada!</h4>
-                    <p>Se cerrará la página al terminar los segundos mostrados.</p>
+              <div class="alert alert-danger" role="alert">
+                    <h4 class="segundos float-right" style="font-size: 50px; margin-top: -1%; font-weight: italic;"></h4>
+                    <h4 class="alert-heading">Salida registrada. <i class="far fa-check-circle"></i></h4>
+                    <p class="text-center">Se cerrará la página al terminar los segundos mostrados.</p>
 
-                    <h4 class="segundos float-right" style="font-size: 50px; margin-top: -3%; font-weight: bold;"></h4>
               </div>
             @endif
 
             @if($check->status == "noAceptado")
               <div class="alert alert-danger" role="alert">
-                    <h4 class="alert-heading"> No Se Realizo El Registro!</h4>
-                    <p>Los registros no se realizaron el mismo dia.</p>
+                   <h4 class="segundos float-right" style="font-size: 50px; margin-top: -1%; font-weight:italic;"></h4>
 
-                    <h4 class="segundos float-right" style="font-size: 50px; margin-top: -3%; font-weight: bold;"></h4>
+                    <h4 class="alert-heading">Ocurrio un error, no se realizo el registro.</h4>
+                    <p class="text-center">Los registros no se realizaron el mismo dia.</p>
+
               </div>
             @endif
 
