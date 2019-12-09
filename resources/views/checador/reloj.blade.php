@@ -12,7 +12,7 @@
     <link href="{{ asset('app_assets/css/sb-admin-2.min.css') }}" rel="stylesheet">
     <title>Checador | DASC</title>
 </head>
-<body>
+<body class="bg-gray-300">
 
 <div class="container mx-auto mt-5">
     <div class="card-shadow-mb-4">  
